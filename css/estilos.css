@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.encabezado {
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: block;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cuerpo {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.8s ease-out;
+}
+
+.cuerpo p {
+    margin: 15px 0;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #667eea;
+    border-radius: 8px;
+    font-size: 17px;
+    color: #333;
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+.cuerpo p:hover {
+    background-color: #e9ecef;
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cuerpo a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.cuerpo a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .encabezado {
+        font-size: 1.8em;
+        padding: 20px;
+    }
+    
+    .cuerpo {
+        padding: 20px;
+    }
+    
+    .cuerpo p {
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+}
